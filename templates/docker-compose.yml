@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  droid-chat:
+    build: ..
+    container_name: droid-chat-telegram
+    restart: always
+    env_file: ../config/.env
+    volumes:
+      - ../data:/app/data
+      - ~/.factory:/root/.factory:ro
+    environment:
+      - PLATFORM=telegram
+
+  # Uncomment for WhatsApp
+  # droid-chat-whatsapp:
+  #   build: ..
+  #   container_name: droid-chat-whatsapp
+  #   restart: always
+  #   env_file: ../config/.env
+  #   volumes:
+  #     - ../data-whatsapp:/app/data
+  #     - ~/.factory:/root/.factory:ro
+  #   environment:
+  #     - PLATFORM=whatsapp

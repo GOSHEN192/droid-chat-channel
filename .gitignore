@@ -1,0 +1,8 @@
+node_modules/
+data/
+.env
+sessions.json
+reminders.json
+*.log
+config.json
+whatsapp-auth/

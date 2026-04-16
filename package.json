@@ -1,0 +1,24 @@
+{
+  "name": "droid-chat-channel",
+  "version": "1.0.0",
+  "description": "Bridge Factory Droid CLI to chat platforms (Telegram, WhatsApp, and more)",
+  "main": "index.js",
+  "bin": {
+    "droid-chat": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:telegram": "node index.js --platform telegram",
+    "start:whatsapp": "node index.js --platform whatsapp",
+    "setup": "node setup.js"
+  },
+  "keywords": ["droid", "factory-ai", "telegram", "whatsapp", "chatbot", "ai-agent"],
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^4.16.0"
+  },
+  "optionalDependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "pino": "^8.0.0"
+  }
+}
